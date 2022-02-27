@@ -1,0 +1,48 @@
+---
+
+import Header from '../component/Header.jsx';
+import Main from '../component/Main.astro';
+import Cerimonia from '../component/Cerimonia.astro';
+import Pranzo from '../component/Pranzo.astro';
+import RSVP from '../component/RSVP.astro';
+
+const menuOptions = [
+	{
+		name : "Home",
+		link : "#"
+	},
+	{
+		name : "Cerimonia",
+		link : "#cerimonia"
+	},
+	{
+		name : "Pranzo",
+		link : "#pranzo"
+	},
+	{
+		name : "RSVP",
+		link : "/rsvp"
+	},
+	{
+		name : "Lista",
+		link : "/lista-nozze"
+	}
+];
+
+---
+<html lang="it">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Otter plus Nuclear Manatee</title>
+		<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/global.css')} />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	</head>
+	<body>
+		<Header menuOptions={menuOptions} client:load />
+		<Main />
+		<Cerimonia />
+		<Pranzo />
+		<RSVP />
+	</body>
+</html>

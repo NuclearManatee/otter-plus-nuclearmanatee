@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300&display=swap');
+
+:root{
+
+    --color-primary: #800020;
+    --background-primary: white;
+    --background-secondary: #fffaf0;
+
+    --font-family-primary: 'Roboto Serif', sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--color-primary);
+    background-color: var(--background-primary);
+    font-family: var(--font-family-primary);
+}
+
+section {
+    background-color: var(--background-primary);
+    height: calc(100vh - min(70px, 3rem));
+    padding: 2rem;
+    grid-area: logo;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.arrow-wrapper{
+    animation: MoveUpDown 1.2s linear infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1rem);
+    }
+}
