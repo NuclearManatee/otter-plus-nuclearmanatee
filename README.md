@@ -1,6 +1,6 @@
 # Otter plus NuclearManatee
 
-This is the very one and corny site I'll use to collect RSVP for my marriage with my better half.
+This is the very one and corny site I'll use to collect RSVP for my wedding with my better half.
 
 ```
 Still under construction.
