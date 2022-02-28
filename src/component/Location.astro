@@ -1,0 +1,17 @@
+---
+
+import Section from '../component/Section.astro';
+import Map from '../component/Map.jsx';
+
+---
+
+<Section id="location">
+    <h1>Location</h1>
+    <div id="map"></div>
+    <Map locations="" client:only/>
+    <a href="#rsvp">
+        <div class="arrow-wrapper">
+            <span class="material-icons">arrow_downward</span>
+        </div>
+    </a>
+</Section>

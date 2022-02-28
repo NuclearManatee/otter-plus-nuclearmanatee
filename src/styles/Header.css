@@ -1,6 +1,7 @@
 
 header{
-    background-color: var(--background-secondary);
+    background-color: var(--color-primary);
+    color: var(--background-primary);
     position: fixed;
     top: 0; /* Stick it to the top */
     padding: 1rem;
@@ -11,6 +12,7 @@ header{
 }
 
 .icon-wrapper{
+    background-color: var(--background-primary);
     height: 2rem;
     width: 2rem;
     border-radius: 10%;
@@ -21,6 +23,7 @@ header{
 }
 
 .logo{
+    color: var(--color-primary);
     font-weight: bold;
 }
 
@@ -44,6 +47,7 @@ a:hover {
 
 .nav-mobile{
     display: none;
+    color: var(--color-primary);
 }
 
 @media screen and (max-width: 550px) {
@@ -76,14 +80,5 @@ a:hover {
 
     .nav-desktop {
         display: none;
-    }
-
-    .icon-wrapper{
-        background-color: var(--background-primary);
-    }
-    
-
-    header {
-        background-color: var(--color-primary);
     }
 }

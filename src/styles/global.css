@@ -4,7 +4,7 @@
 
     --color-primary: #800020;
     --background-primary: white;
-    --background-secondary: #fffaf0;
+    --background-secondary: #fff8eb;
 
     --font-family-primary: 'Roboto Serif', sans-serif;
 
@@ -18,13 +18,33 @@ body {
 }
 
 section {
-    background-color: var(--background-primary);
     height: calc(100vh - min(70px, 3rem));
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+section .buffer {
+    background-color: var(--background-secondary);;
+}
+
+section .container {
+    width: max(600px,70vw);
+    background-color: var(--background-primary);;
     padding: 2rem;
-    grid-area: logo;
     display: grid;
     align-items: center;
     justify-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    section .buffer{
+        display: none;
+    }
+
+    section .container {
+        width: 100vw;
+    }
 }
 
 .arrow-wrapper{

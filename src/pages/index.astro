@@ -2,9 +2,10 @@
 
 import Header from '../component/Header.jsx';
 import Main from '../component/Main.astro';
-import Cerimonia from '../component/Cerimonia.astro';
-import Pranzo from '../component/Pranzo.astro';
-import RSVP from '../component/RSVP.astro';
+import Programma from '../component/Programma.astro';
+import Location from '../component/Location.astro';
+import Rsvp from '../component/Rsvp.astro';
+import ListaNozze from '../component/lista-nozze.astro';
 
 const menuOptions = [
 	{
@@ -12,20 +13,20 @@ const menuOptions = [
 		link : "#"
 	},
 	{
-		name : "Cerimonia",
-		link : "#cerimonia"
+		name : "Programma",
+		link : "#programma"
 	},
 	{
-		name : "Pranzo",
-		link : "#pranzo"
+		name : "Location",
+		link : "#location"
 	},
 	{
 		name : "RSVP",
-		link : "/rsvp"
+		link : "#rsvp"
 	},
 	{
 		name : "Lista",
-		link : "/lista-nozze"
+		link : "#lista-nozze"
 	}
 ];
 
@@ -41,8 +42,9 @@ const menuOptions = [
 	<body>
 		<Header menuOptions={menuOptions} client:load />
 		<Main />
-		<Cerimonia />
-		<Pranzo />
-		<RSVP />
+		<Programma />
+		<Location />
+		<Rsvp />
+		<ListaNozze />
 	</body>
 </html>
