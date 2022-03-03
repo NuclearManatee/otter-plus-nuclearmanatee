@@ -4,11 +4,16 @@ import Section from '../component/Section.astro';
 import Map from '../component/Map.jsx';
 
 ---
+<style>
+
+
+</style>
 
 <Section id="location">
-    <h1>Location</h1>
-    <div id="map"></div>
-    <Map locations="" client:only/>
+    <Map client:only/>
+    <h3>Come Arrivare</h3>
+    <p><b>Da Milano</b>: prendete la A7/A53 con uscita Tang. Ovest per Pavia/Torino/Genova/Voghera, immettendovi poi sulla SS 35 dei Giovi.</p>
+    <p><b>Da Bologna o Siena</b>: A1/E35 e A21/E70 in direzione Broni-Stradella.</p>
     <a href="#rsvp">
         <div class="arrow-wrapper">
             <span class="material-icons">arrow_downward</span>

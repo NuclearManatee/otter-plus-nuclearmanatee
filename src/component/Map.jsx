@@ -1,22 +1,32 @@
-import mapboxgl from 'mapbox-gl';
+import {useState, useEffect, useRef} from "react";
+import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
-export default function Map({ locations }){
+mapboxgl.accessToken = import.meta.env.PUBLIC_MAPBOX_APIKEY;
 
-    mapboxgl.accessToken = ({}).PUBLIC_MAPBOX_APIKEY;
+export default function Map(){
 
-    console.log(`apikey is ${mapboxgl.accessToken}`);
-
-    const container = "map";
-
-    const map = new mapboxgl.Map({
-        container: container,
-        style: 'mapbox://styles/mapbox/dark-v10',
-        center:  [ 12.567898, 55.67583 ],
-        zoom: 9
-    }); 
-
-    return(<>
-        <div></div>
-    </>)
+    const mapContainer = useRef(null);
+    const map = useRef(null);
+    
+    useEffect(() => {
+        if (map.current) return; // initialize map only once
+        map.current = new mapboxgl.Map({
+            container: mapContainer.current,
+            attributionControl: false,
+            style: 'mapbox://styles/mapbox/satellite-streets-v11',
+            center: [ 9.19832095221738, 44.97830887789329 ],
+            zoom: 12
+        });
+        new mapboxgl.Marker({
+            color: '#800020'
+        }).setLngLat([ 9.185690377547964, 44.980376549848195 ]).addTo(map.current);
+        new mapboxgl.Marker({
+            color: '#800020'
+        }).setLngLat([ 9.21182947089001, 44.978672177686974 ]).addTo(map.current);
+    });
+    
+    return (
+        <div ref={mapContainer} className="map" />
+    );
 
 }

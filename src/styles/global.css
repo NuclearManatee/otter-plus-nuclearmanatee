@@ -59,3 +59,10 @@ section .container {
         transform: translateY(-1rem);
     }
 }
+
+.map {
+    width: min(600px, 80vw);
+    height: min(400px, 60vh);
+    margin-top: min(75px, 3.5rem);
+    border-radius: 10%;
+}
