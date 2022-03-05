@@ -1,11 +1,12 @@
 import {useState} from "react";
 import InputKey from "./InputKey";
 import HandleRsvp from "./HandleRsvp";
+import {RsvpProvider} from "./RsvpContext";
 
 
 export default function Rsvp(){
 
-    const [isValidKey, setIdValidKey] = useState(false);
+    const [isValidSearch, setIsValidSearch] = useState(false);
 
     function handleSubmit(e){
         e.preventDefault();
@@ -13,10 +14,12 @@ export default function Rsvp(){
     }
 
     return(<>
-        { isValidKey ? 
-            <HandleRsvp />
-            :
-            <InputKey /> 
-        }        
+        <RsvpProvider setIsValidSearch={setIsValidSearch}>
+            { isValidSearch ? 
+                <HandleRsvp />
+                :
+                <InputKey /> 
+            } 
+        </RsvpProvider>        
     </>)
 }

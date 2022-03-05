@@ -9,9 +9,10 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.23.2"
+    "astro": "^0.23.7"
   },
   "dependencies": {
+    "firebase": "^9.6.8",
     "mapbox-gl": "^2.7.0"
   }
 }
