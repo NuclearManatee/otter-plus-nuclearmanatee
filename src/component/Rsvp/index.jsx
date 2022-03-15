@@ -2,6 +2,7 @@ import {useState} from "react";
 import InputKey from "./InputKey";
 import HandleRsvp from "./HandleRsvp";
 import {RsvpProvider} from "./RsvpContext";
+import "../../styles/Rsvp.css"
 
 
 export default function Rsvp(){

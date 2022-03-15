@@ -1,5 +1,5 @@
 import React, {useState, useEffect, createContext, useContext} from "react";
-import { participationCollection, query, where, limit, getDocs } from "./firebase";
+import { dataBase, doc, getDoc, setDoc } from "./firebase";
 
 import config from "../../data/config.json";
 
@@ -25,23 +25,37 @@ export default function RsvpProvider(props) {
 
     async function fetchData(){
 
-      const participation = await getDocs( 
-        query(
-          participationCollection, 
-          where('key','==',searchKey),
-          limit(1)
-        ) 
-      );
+      const docRef = doc(dataBase,'rspv',searchKey);
 
-      if( participation.empty){
-        setIsEmpty(true);
+      const docSnap = await getDoc(docRef);
+
+      console.log(docSnap);
+
+      if (docSnap.exists()) {
+        setData(docSnap.data());
       } else {
-        setData(participation.docs[0].data());
-      }    
+        setIsEmpty(true);
+      }
+ 
+    } 
+
+    function setAttendee(index,value){
+      let newData = data;
+      newData.attendees[index].attending = value;
+      setData(newData);
+    }
+
+    function setNotes(value){
+      let newData = data;
+      newData.notes = value;
+      setData(newData);
+    }
+
+    async function saveParticipation(){
+      await setDoc(doc(dataBase,'rspv',searchKey), data);
     }
 
     useEffect(() => {
-      console.log(data);
       if( Object.keys(data).length > 0){
         setIsValidSearch(true);
       }
@@ -53,7 +67,9 @@ export default function RsvpProvider(props) {
         handleSearch : handleSearch,
         isEmpty : isEmpty,
         data : data,
-        setData : setData
+        setAttendee : setAttendee,
+        saveParticipation : saveParticipation,
+        setNotes : setNotes
     };
     
     return (

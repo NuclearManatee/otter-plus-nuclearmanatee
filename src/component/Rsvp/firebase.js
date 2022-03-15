@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, query, where, limit, getDocs } from 'firebase/firestore';
+import { getFirestore, collection, query, where, limit, getDocs, doc, getDoc, setDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyDb2wRF-dpRgSZY2DjCE5wfba0nus6Nrk4",
@@ -18,4 +18,4 @@ const dataBase = getFirestore();
 
 const participationCollection = collection(dataBase,'rspv');
 
-export { participationCollection, query, where, limit, getDocs };
+export { participationCollection, dataBase, query, where, limit, getDocs, doc, getDoc, setDoc };
