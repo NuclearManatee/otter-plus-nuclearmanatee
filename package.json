@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "firebase": "^9.6.8",
+    "firebase-tools": "^10.4.0",
     "mapbox-gl": "^2.7.0"
   }
 }

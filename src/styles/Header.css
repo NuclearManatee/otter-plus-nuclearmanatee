@@ -1,4 +1,10 @@
 
+html {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+}
+
+
 header{
     background-color: var(--color-primary);
     color: var(--background-primary);
@@ -7,6 +13,8 @@ header{
     padding: 1rem;
     height: min(70px, 3rem);
     width: 100vw;
+    width: -webkit-fill-available;
+
     display: grid;
     grid-template-areas: "logo nav";
 }

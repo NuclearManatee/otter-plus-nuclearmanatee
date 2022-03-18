@@ -1,10 +1,38 @@
 ---
 import Section from '../component/Section.astro';
+import { Markdown } from 'astro/components';
 ---
+<style>
+.listaNozze-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+</style>
+
 
 <Section id="lista-nozze">
-    <div>
-        <h1>Lista Nozze</h1>
-        <p>COMING SOON.</p>
+    <div class="listaNozze-container">
+        <h2>Lista Nozze</h2>
+        <Markdown>
+            Nel nella nostra vita e nella nostra casa non c'è più spazio per beni materiali.
+            Il regalo più bello che possaite farci è la vostra presenza, MA
+
+            Ci piacerebbe tantissimo andare in viaggio di nozze in Perù!
+
+            
+        </Markdown>
+        <p></p>
+        <Markdown>
+            Se voleste darci una mano:
+
+            **IBAN**: Disponibile non appena riusciamo ad aprire un Conto
+            
+            **CARDANO**: Contattate Edoardo
+            
+            **PAYPAL**: [paypal.me/ginessa91](paypal.me/ginessa91)
+        </Markdown>
     </div>
 </Section>

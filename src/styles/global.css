@@ -17,10 +17,18 @@ body {
     font-family: var(--font-family-primary);
 }
 
+html {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+}
+
+
 section {
     height: calc(100vh - min(70px, 3rem));
+    width: -webkit-fill-available;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
+    padding-top: min(70px, 3rem);
 }
 
 section .buffer {
@@ -29,6 +37,7 @@ section .buffer {
 
 section .container {
     width: max(600px,70vw);
+    width: -webkit-fill-available;
     background-color: var(--background-primary);;
     padding: 2rem;
     display: grid;
