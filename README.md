@@ -2,9 +2,8 @@
 
 This is the very one and corny site I'll use to collect RSVP for my wedding with my better half.
 
-```
-The Site is live on [otterplus.nuclearmanatee.games](https://otterplus.nuclearmanatee.games).
-```
+> The Site is live at
+[otterplus.nuclearmanatee.games](https://otterplus.nuclearmanatee.games).
 
 Built with [Astro](https://astro.build/), React and many angry hours on CSS-grid.
 
