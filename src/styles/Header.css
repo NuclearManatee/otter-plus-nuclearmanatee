@@ -63,9 +63,10 @@ a:hover {
     .nav-mobile {
         position: fixed;
         top: 0;
-        padding: 1rem;
+        padding: 1.5rem;
+        margin: 1rem;
         min-width: 40vw;
-        border-bottom-left-radius: 20%;
+        border-radius: 15%;
         z-index: 1;
         background-color: var(--background-secondary);
         opacity: 0;

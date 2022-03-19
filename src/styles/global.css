@@ -24,7 +24,7 @@ html {
 
 
 section {
-    height: calc(100vh - min(70px, 3rem));
+    min-height: calc(100vh - min(70px, 3rem));
     width: -webkit-fill-available;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -47,12 +47,17 @@ section .container {
 }
 
 @media screen and (max-width: 700px) {
+
+    section{
+        display: flex;
+    }
+
     section .buffer{
         display: none;
     }
 
     section .container {
-        width: 100vw;
+        width: -webkit-fill-available;
     }
 }
 
