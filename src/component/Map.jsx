@@ -14,15 +14,12 @@ export default function Map(){
             container: mapContainer.current,
             attributionControl: false,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
-            center: [ 9.19832095221738, 44.97830887789329 ],
-            zoom: 12
+            center: [ 9.185690377547964, 44.980376549848195 ],
+            zoom: 13
         });
         new mapboxgl.Marker({
             color: '#800020'
         }).setLngLat([ 9.185690377547964, 44.980376549848195 ]).addTo(map.current);
-        new mapboxgl.Marker({
-            color: '#800020'
-        }).setLngLat([ 9.21182947089001, 44.978672177686974 ]).addTo(map.current);
     });
     
     return (
