@@ -7,6 +7,10 @@ export default function Header(props){
 
     const [toggleMenu, setToggleMenu] = useState(false);
 
+    const navStyle = {
+        "--menuoptions" : menuOptions.length
+    };
+
     function toggleActive(){
         setToggleMenu( (state) => !state);
         document.getElementById('nav-mobile').classList.toggle('active');
@@ -20,7 +24,7 @@ export default function Header(props){
             </div>
             
             
-            <nav className="nav-desktop">
+            <nav className="nav-desktop" style={navStyle}>
                 { menuOptions.map((item,index) => (
                     <span key={index}><a  href={item.link}>{item.name}</a></span> 
                 ))}
