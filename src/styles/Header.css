@@ -17,6 +17,7 @@ header{
 
     display: grid;
     grid-template-areas: "logo nav";
+    z-index: 1;
 }
 
 .icon-wrapper{
